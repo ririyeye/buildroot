@@ -7,9 +7,9 @@
 /.config
 *.depend
 *.o
-/*.patch
 /*.diff
 *.orig
 *.rej
 *~
 *.pyc
+*ctags*

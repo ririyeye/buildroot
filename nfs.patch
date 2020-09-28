@@ -1,0 +1,35 @@
+--- /dev/null	2020-08-10 16:34:29.194696896 +0800
++++ etc/init.d/S41nfs	2020-08-13 13:08:29.892102248 +0800
+@@ -0,0 +1,32 @@
++#!/bin/sh
++#
++# Start the network....
++#
++
++# Debian ifupdown needs the /run/network lock directory
++
++case "$1" in
++  start)
++	{
++		sleep 5
++		printf "Mount nfs: "
++		mount -t nfs -o nolock 192.168.50.162:/a53root /mnt
++		[ $? = 0 ] && echo "OK" || echo "FAIL"
++	}&
++	;;
++  stop)
++	printf "Stopping network: "
++	/sbin/ifdown -a
++	[ $? = 0 ] && echo "OK" || echo "FAIL"
++	;;
++  restart|reload)
++	"$0" stop
++	"$0" start
++	;;
++  *)
++	echo "Usage: $0 {start|stop|restart}"
++	exit 1
++esac
++
++exit $?
++

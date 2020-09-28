@@ -1,0 +1,12 @@
+--- etc/network/interfaces.bk	2020-08-07 18:05:54.046743776 +0800
++++ etc/network/interfaces	2020-08-10 15:33:21.273419366 +0800
+@@ -2,3 +2,9 @@
+ 
+ auto lo
+ iface lo inet loopback
++auto eth0
++iface eth0 inet static
++address 192.168.50.164
++netmask 255.255.255.0
++gateway 192.168.50.160
++dns-nameserver 223.5.5.5
