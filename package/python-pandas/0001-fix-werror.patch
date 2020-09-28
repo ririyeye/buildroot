@@ -1,0 +1,11 @@
+--- python-pandas-1.1.0/setup.py	2020-07-18 02:59:38.000000000 +0800
++++ python-pandas-1.1.0.bk/setup.py	2020-08-04 11:22:04.218177867 +0800
+@@ -433,7 +433,7 @@ if is_platform_windows():
+         extra_compile_args.append("/Z7")
+         extra_link_args.append("/DEBUG")
+ else:
+-    extra_compile_args = ["-Werror"]
++    extra_compile_args = []
+     extra_link_args = []
+     if debugging_symbols_requested:
+         extra_compile_args.append("-g")

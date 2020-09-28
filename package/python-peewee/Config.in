@@ -1,0 +1,6 @@
+config BR2_PACKAGE_PYTHON_PEEWEE
+    bool "python-peewee"
+    help
+      Peewee is a simple and small ORM. It has few (but expressive) concepts, making it easy to learn and intuitive to use.
+
+      https://github.com/coleifer/peewee
