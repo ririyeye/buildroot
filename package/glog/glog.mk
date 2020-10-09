@@ -19,6 +19,4 @@ else
 GLOG_CONF_OPTS += -DWITH_GFLAGS=OFF
 endif
 
-#GLOG_CONF_OPTS += -DBUILD_SHARED_LIBS=ON
-
 $(eval $(cmake-package))
