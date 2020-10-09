@@ -24,5 +24,4 @@ patch -d ${TARGET_DIR} -p0 < ${POST_DIR}/nfs.patch
 chmod a+x ${TARGET_DIR}/etc/init.d/*
 
 
-cp ${POST_DIR}/libglog.so.0.4.0 ${TARGET_DIR}/usr/lib
 echo "patch ok"
