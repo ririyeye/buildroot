@@ -9,7 +9,7 @@ GLOG_VERSION = 0.4.0
 GLOG_SITE = $(call github,google,glog,v$(GLOG_VERSION))
 else
 GLOG_VERSION = c8f8135a5720aee7de8328b42e4c43f8aa2e60aa
-GLOG_SITE = $(call github,google,glog,v$(GLOG_VERSION))
+GLOG_SITE = $(call github,google,glog,$(GLOG_VERSION))
 endif
 
 GLOG_INSTALL_STAGING = YES
