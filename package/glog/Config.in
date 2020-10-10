@@ -11,3 +11,25 @@ config BR2_PACKAGE_GLOG
 comment "glog needs a toolchain w/ C++"
 	depends on !BR2_microblaze
 	depends on !BR2_INSTALL_LIBSTDCPP
+
+if BR2_PACKAGE_GLOG
+
+choice
+	prompt "glog version"
+	default USING_GLOG_NEW
+	help
+	  Select the version , old version may cause some link error
+
+config USING_GLOG_OLD
+	bool "glog old"
+	help
+	  old version glog may cause some link error
+
+config USING_GLOG_NEW
+	bool "glog new"
+	help
+	  new version glog from google:github
+endchoice
+endif
+
+
