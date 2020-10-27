@@ -13,7 +13,7 @@
 +	{
 +		sleep 5
 +		printf "Mount nfs: "
-+		mount -t nfs -o nolock 192.168.50.162:/a53root /mnt
++		mount -t nfs -o nolock 192.168.50.162:/imxroot /mnt
 +		[ $? = 0 ] && echo "OK" || echo "FAIL"
 +	}&
 +	;;
