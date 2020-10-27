@@ -21,6 +21,9 @@ patch -d ${TARGET_DIR} -p0 < ${POST_DIR}/libpath.patch
 patch -d ${TARGET_DIR} -p0 < ${POST_DIR}/nfs.patch
 
 
+cp ${POST_DIR}/update.sh ${TARGET_DIR}
+chmod a+x ${TARGET_DIR}/update.sh
+
 chmod a+x ${TARGET_DIR}/etc/init.d/*
 
 
