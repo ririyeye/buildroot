@@ -16,7 +16,6 @@ done
 
 patch -d ${TARGET_DIR} -p0 < ${POST_DIR}/sshd.patch
 patch -d ${TARGET_DIR} -p0 < ${POST_DIR}/interface.patch
-patch -d ${TARGET_DIR} -p0 < ${POST_DIR}/insmod.patch
 patch -d ${TARGET_DIR} -p0 < ${POST_DIR}/libpath.patch
 patch -d ${TARGET_DIR} -p0 < ${POST_DIR}/nfs.patch
 
